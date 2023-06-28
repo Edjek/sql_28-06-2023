@@ -1,0 +1,34 @@
+**Affichages des tables** :
+
+    SHOW TABLES;
+
+**Création d'une table** :
+
+    CREATE TABLE nom_table (
+        nom VARCHAR(255),
+        age INT,
+        email VARCHAR(255)
+    );
+
+**Affichage de la structure d'une table** :
+
+    DESCRIBE nom_table;
+
+**Affichage de la requete de création de la table** :
+
+    SHOW CREATE TABLE nom_table;
+
+***Suppression d'une table ** :
+
+    DROP TABLE nom_table;
+
+
+creer base de donne ecommerce
+afficher vos base de donnees 
+selectioner la base en question
+creer une table produit
+    id entier
+    nom type
+    description  type 
+    prix type
+    statut booleen
