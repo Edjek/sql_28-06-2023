@@ -1,0 +1,13 @@
+Voici quelques-unes des principales commandes pour modifier une table dans MySQL :
+
+**Ajouter une colonne** :
+    ALTER TABLE nom_table ADD nom_colonne type_de_donnee;
+
+**Supprimer une colonne**
+    ALTER TABLE nom_table DROP COLUMN nom_colonne;
+
+**Modifier le type de donnée d'une colonne** :
+    ALTER TABLE nom_table MODIFY nom_colonne nouveau_type nouvelle_contrainte;
+
+**Modifier le nom d'une colonne** :
+    ALTER TABLE nom_table CHANGE ancien_nom nouveau_nom type;    

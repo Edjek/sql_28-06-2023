@@ -1,34 +1,38 @@
-**Affichages des tables** :
+Voici quelques commandes de base pour interagir avec une table dans une base de données MySQL :
 
+**Affichages des tables** :
     SHOW TABLES;
 
-**Création d'une table** :
+**Affichage de la structure d'une table** :
+    DESCRIBE nom_table;
 
+**Affichage de la requete de création de la table** :
+    SHOW CREATE TABLE nom_table;
+
+***Suppression d'une table ** :
+    DROP TABLE nom_table;
+
+**Création d'une table** :
     CREATE TABLE nom_table (
         nom VARCHAR(255),
         age INT,
         email VARCHAR(255)
     );
 
-**Affichage de la structure d'une table** :
+**Ajouter des contraintes** :
+    CREATE TABLE user (
+        id int UNSIGNED PRIMARY KEY AUTO_INCREMENT ,
+        nom VARCHAR(255) NOT NULL, 
+        prenom VARCHAR(255) NOT NULL,
+        email VARCHAR(255) NOT NULL UNIQUE,     
+        pseudo VARCHAR(255) DEFAULT 'JOHN DOE',
+        age tinyint UNSIGNED CHECK (age >0)
+    );
 
-    DESCRIBE nom_table;
+**Insertion de données dans une table** :
+    INSERT INTO nom_table (colonne1, colonne2, ...)
+    VALUES (valeur1, valeur2,...), (valeur1, valeur2,...);
 
-**Affichage de la requete de création de la table** :
-
-    SHOW CREATE TABLE nom_table;
-
-***Suppression d'une table ** :
-
-    DROP TABLE nom_table;
-
-
-creer base de donne ecommerce
-afficher vos base de donnees 
-selectioner la base en question
-creer une table produit
-    id entier
-    nom type
-    description  type 
-    prix type
-    statut booleen
+**Sélection de données d'une table** :
+    SELECT *
+    FROM nom_table;
