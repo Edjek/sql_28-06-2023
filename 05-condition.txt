@@ -1,0 +1,25 @@
+Voici les conditions avec des exemples :
+
+**EQUALS (=)** :
+   - Exemple : `SELECT * FROM table WHERE age = 25;`
+
+**NOT EQUALS (<>, !=)** :
+   - Exemple : `SELECT * FROM table WHERE couleur <> 'rouge';`
+
+**LESS THAN (<)** :
+   - Exemple : `SELECT * FROM table WHERE quantite < 10;`
+
+**LESS THAN OR EQUAL TO (<=)** :
+   - Exemple : `SELECT * FROM table WHERE prix <= 100.00;`
+
+**GREATER THAN (>)** :
+   - Exemple : `SELECT * FROM table WHERE score > 90;`
+
+**GREATER THAN OR EQUAL TO (>=)** :
+   - Exemple : `SELECT * FROM table WHERE date >= '2022-01-01';`
+
+**LIKE** :
+   - Exemple : `SELECT * FROM table WHERE nom LIKE 'J%';`
+
+**NOT LIKE** :
+   - Exemple : `SELECT * FROM table WHERE email NOT LIKE '%gmail.com';`
