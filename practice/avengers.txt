@@ -17,6 +17,7 @@ Voici un exemple d'exercice avec une base de données pour des figurines Avenger
         annee_sortie YEAR,
         description TEXT
     );
+
 4. Insérez des données dans la table "Figurines" pour représenter des figurines Avengers :
 
     INSERT INTO figurines (nom, super_pouvoir, annee_sortie, description) 
@@ -30,8 +31,20 @@ Voici un exemple d'exercice avec une base de données pour des figurines Avenger
 
 5. Effectuez des requêtes pour afficher les figurines Avengers :
 
-  - Afficher toutes les figurines :
-    
-    SELECT * FROM figurines;
+    - Afficher toutes les figurines :
 
-  - Afficher les figurines sorties après 2010 :
+        SELECT * FROM figurines;
+
+    - Afficher les figurines sorties après 2010 :
+
+        SELECT * FROM figurines WHERE annee_sortie > 2010;
+    
+    - Afficher les figurines avec le pouvoir "Force" dans leur super_pouvoir :
+
+        SELECT * FROM Figurines WHERE super_pouvoir LIKE '%Force%';
+
+  6. Modifiez dans la table "figurines" la description de "Black Panther" par 'Prince de Wakanda et protecteur de son peuple.' :
+
+  7. Supprimez une figurine de la table "Figurines" :
+
+    DELETE FROM Figurines WHERE nom = 'Hulk';

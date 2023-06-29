@@ -36,3 +36,12 @@ Voici quelques commandes de base pour interagir avec une table dans une base de 
 **Sélection de données d'une table** :
     SELECT *
     FROM nom_table;
+
+**Mise à jour de données dans une table** :
+    UPDATE nom_table
+    SET nom_colonne = nouvelle_valeur, nom_colonne2 = nouvelle_valeur2
+    WHERE condition;
+
+**Suppression de données dans une table** :
+    DELETE FROM nom_table
+    WHERE conditions;

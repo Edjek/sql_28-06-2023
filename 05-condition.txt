@@ -23,3 +23,14 @@ Voici les conditions avec des exemples :
 
 **NOT LIKE** :
    - Exemple : `SELECT * FROM table WHERE email NOT LIKE '%gmail.com';`
+
+**BETWEEN** :
+   - Exemple : `SELECT * FROM table WHERE quantite BETWEEN 10 AND 20;`
+
+**ORDER BY ** :
+   - Exemple : `SELECT * FROM table WHERE quantite BETWEEN 10 AND 20 ORDER BY quantite ASC;`
+
+**LIMIT** :
+    - Exemple : `SELECT * FROM table WHERE quantite BETWEEN 10 AND 20 ORDER BY quantite DESC LIMIT 3;`
+
+! L'ordre compte WHERE => ORDER BY =>LIMIT;

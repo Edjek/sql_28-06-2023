@@ -1,0 +1,36 @@
+Créer une base de données nommée "movies_db"
+
+Sélectionnez la base de données nouvellement créée
+
+
+Créer une table nommée "movie" avec les champs suivants :
+    CREATE TABLE movie(
+        id int UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+        title VARCHAR(255) NOT NULL,
+        description text,
+        release_date DATE,
+        duration smallint UNSIGNED,
+        rating tinyint UNSIGNED
+    );
+
+Créer une table nommée "director" avec les champs suivants :
+
+    CREATE TABLE director (
+        id int UNSIGNED primary key auto_increment,
+        firstname varchar(255),
+        lastname varchar(255),
+        birthday date
+    );
+
+Créer une table nommée "actor" avec les champs suivants :
+
+    CREATE TABLE actor(
+        id int UNSIGNED primary key auto_increment,
+        firstname varchar(255),
+        lastname varchar(255),
+        birthday date
+    );
+
+Modifier la table "movie" pour ajouter un champ "director_id" (int)
+    ALTER TABLE movie ADD director_id int;
+

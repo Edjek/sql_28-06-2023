@@ -10,4 +10,7 @@ Voici quelques-unes des principales commandes pour modifier une table dans MySQL
     ALTER TABLE nom_table MODIFY nom_colonne nouveau_type nouvelle_contrainte;
 
 **Modifier le nom d'une colonne** :
-    ALTER TABLE nom_table CHANGE ancien_nom nouveau_nom type;    
+    ALTER TABLE nom_table CHANGE ancien_nom nouveau_nom type;
+
+**AJOUTER une contrainte FOREIGN KEY** :
+    ALTER TABLE nom_table ADD CONSTRAINT nom_contrainte FOREIGN KEY (colonne) REFERENCES autre_table(colonne_reference)
