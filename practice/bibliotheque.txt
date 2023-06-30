@@ -3,13 +3,11 @@ Voici un exercice de création d'une base de données pour gérer des livres ave
 Créez la base de données "bibliotheque" :
 
 
-
 Créez la table "auteurs" avec une clé primaire "id_auteur" :
 
     id_auteur INT PRIMARY KEY AUTO_INCREMENT,
     nom VARCHAR(50) NOT NULL,
     nationalite VARCHAR(50)
-
 
 
 Créez la table "editeurs" avec une clé primaire "id_editeur" :
@@ -19,16 +17,13 @@ Créez la table "editeurs" avec une clé primaire "id_editeur" :
     adresse VARCHAR(100)
 
 
-
 Créez la table "livres" avec les colonnes nécessaires, y compris les clés étrangères "id_auteur" et "id_editeur" :
-
 
     id_livre INT PRIMARY KEY AUTO_INCREMENT,
     titre VARCHAR(100) NOT NULL,
     annee_publication INT,
     id_auteur INT,
     id_editeur INT
-
 
 
 Insérez des données dans les tables :
@@ -64,13 +59,10 @@ Exercice 1: Modifications de données
 Ajouter une nouvelle colonne "prix" de type DECIMAL à la table "livres" avec une valeur par défaut de 0 :
 
 
-
 Mettre à jour le prix du livre avec l'ID 1 pour le faire passer à 19.99 :
 
 
-
 Supprimer le livre avec l'ID 3 de la table "livres" :
-
 
 
 Exercice 2: Requêtes de sélection
@@ -78,13 +70,10 @@ Exercice 2: Requêtes de sélection
 Sélectionner tous les livres avec leur titre et leur prix :
 
 
-
 Sélectionner tous les livres publiés après l'année 2000 :
 
 
-
 Sélectionner les auteurs distincts présents dans la table "livres" :
-
 
 
 Exercice 3: Requêtes avec jointure
@@ -92,13 +81,10 @@ Exercice 3: Requêtes avec jointure
 Sélectionner tous les livres avec leur titre, nom de l'auteur et nom de l'éditeur :
 
 
-
 Sélectionner les livres publiés par l'auteur avec l'ID 2 :
 
 
-
 Sélectionner les livres publiés par l'éditeur avec l'ID 1 :
-
 
 
 Ces exercices vous permettent de pratiquer les modifications de données et les requêtes de sélection courantes en SQL

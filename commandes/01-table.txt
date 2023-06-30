@@ -36,7 +36,7 @@ Voici quelques commandes de base pour interagir avec une table dans une base de 
 **Sélection de données d'une table** :
     SELECT *
     FROM nom_table;
-
+Select 
 **Mise à jour de données dans une table** :
     UPDATE nom_table
     SET nom_colonne = nouvelle_valeur, nom_colonne2 = nouvelle_valeur2
@@ -45,3 +45,16 @@ Voici quelques commandes de base pour interagir avec une table dans une base de 
 **Suppression de données dans une table** :
     DELETE FROM nom_table
     WHERE conditions;
+
+**Jointure entre deux tables** :
+    SELECT * FROM nom_de_table JOIN autre_table ON champs_enfant = champs_parent;
+
+**Alias explicite** :
+    SELECT un_nom.id AS 'modifier affichage' 
+    FROM nom_de_table AS un_nom 
+    JOIN autre_table AS autre_nom ON champs_enfant = champs_parent;
+
+**Alias implicite** :
+    SELECT un_nom.id 'modifier affichage' 
+    FROM nom_de_table un_nom 
+    JOIN autre_table autre_nom ON champs_enfant = champs_parent;
