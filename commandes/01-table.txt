@@ -57,4 +57,4 @@ Select
 **Alias implicite** :
     SELECT un_nom.id 'modifier affichage' 
     FROM nom_de_table un_nom 
-    JOIN autre_table autre_nom ON champs_enfant = champs_parent;
+    JOIN autre_table, autre_nom ON champs_enfant = champs_parent;
