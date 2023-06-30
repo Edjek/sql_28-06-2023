@@ -26,7 +26,8 @@ Voici quelques commandes de base pour interagir avec une table dans une base de 
         prenom VARCHAR(255) NOT NULL,
         email VARCHAR(255) NOT NULL UNIQUE,     
         pseudo VARCHAR(255) DEFAULT 'JOHN DOE',
-        age tinyint UNSIGNED CHECK (age >0)
+        age tinyint UNSIGNED CHECK (age >0),
+        CONSTRAINT fk_nom FOREIGN KEY (prenom) REFERENCES nom_table(id)
     );
 
 **Insertion de données dans une table** :
@@ -36,7 +37,7 @@ Voici quelques commandes de base pour interagir avec une table dans une base de 
 **Sélection de données d'une table** :
     SELECT *
     FROM nom_table;
-Select 
+
 **Mise à jour de données dans une table** :
     UPDATE nom_table
     SET nom_colonne = nouvelle_valeur, nom_colonne2 = nouvelle_valeur2

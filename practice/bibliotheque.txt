@@ -92,7 +92,9 @@ Sélectionner les auteurs distincts présents dans la table "livres" :
 Exercice 3: Requêtes avec jointure
 
 Sélectionner tous les livres avec leur titre, nom de l'auteur et nom de l'éditeur :
-
+    SELECT titre, auteurs.nom, editeurs.nom  FROM livres
+    JOIN auteurs ON livres.id_auteur = auteurs.id_auteur
+    JOIN editeurs ON livres.id_editeur = editeurs.id_editeur;
 
 Sélectionner les livres publiés par l'auteur avec l'ID 2 :
 
