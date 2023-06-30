@@ -50,10 +50,6 @@ Insérez des données dans les tables :
     ('Astérix et les Normands', 1966, 2, 2),
     ('Astérix et les Vikings', 1965, 3, 3);
 
-
-Cet exercice crée une base de données "bibliotheque" avec trois tables : "auteurs", "editeurs" et "livresLes tables sont liées par des clés étrangères, et des données de démonstration sont insérées dans les tables.
-
-
 Exercice 1: Modifications de données
 
 Ajouter une nouvelle colonne "prix" de type DECIMAL à la table "livres" avec une valeur par défaut de 0 :
