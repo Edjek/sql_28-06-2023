@@ -5,41 +5,52 @@ Créez la base de données "bibliotheque" :
 
 Créez la table "auteurs" avec une clé primaire "id_auteur" :
 
-    id_auteur INT PRIMARY KEY AUTO_INCREMENT,
-    nom VARCHAR(50) NOT NULL,
-    nationalite VARCHAR(50)
+    CREATE TABLE auteurs (
+        id_auteur INT PRIMARY KEY AUTO_INCREMENT,
+        nom VARCHAR(50) NOT NULL,
+        nationalite VARCHAR(50)
+    );
 
 
 Créez la table "editeurs" avec une clé primaire "id_editeur" :
 
-    id_editeur INT PRIMARY KEY AUTO_INCREMENT,
-    nom VARCHAR(50) NOT NULL,
-    adresse VARCHAR(100)
+    CREATE TABLE editeurs(
+        id_editeur INT PRIMARY KEY AUTO_INCREMENT,
+        nom VARCHAR(50) NOT NULL,
+        adresse VARCHAR(100)
+    );
 
 
 Créez la table "livres" avec les colonnes nécessaires, y compris les clés étrangères "id_auteur" et "id_editeur" :
 
+CREATE TABLE livres(
     id_livre INT PRIMARY KEY AUTO_INCREMENT,
     titre VARCHAR(100) NOT NULL,
     annee_publication INT,
     id_auteur INT,
-    id_editeur INT
+    id_editeur INT,
+    CONSTRAINT fk_id_auteur FOREIGN KEY(id_auteur) REFERENCES auteurs (id_auteur),
+    CONSTRAINT fk_id_editeur FOREIGN KEY(id_editeur) REFERENCES editeurs (id_editeur)
+);
 
 
 Insérez des données dans les tables :
 
 -- Table auteurs
-    ('Hergé', 'Belge'),
+    INSERT INTO auteurs (nom, nationalite) 
+    VALUES ('Hergé', 'Belge'),
     ('René Goscinny', 'Français'),
     ('Albert Uderzo', 'Français');
 
 -- Table editeurs
-    ('Casterman', 'Bruxelles, Belgique'),
+    INSERT INTO editeurs (nom, adresse) 
+    VALUES ('Casterman', 'Bruxelles, Belgique'),
     ('Dargaud', 'Paris, France'),
     ('Lombard', 'Bruxelles, Belgique');
 
 -- Table livres
-    ('Tintin au pays des Soviets', 1929, 1, 1),
+    INSERT INTO livres (titre , annee_publication, id_auteur, id_editeur) 
+    VALUES ('Tintin au pays des Soviets', 1929, 1, 1),
     ('Astérix le Gaulois', 1961, 2, 2),
     ('Astérix et Cléopâtre', 1965, 2, 2),
     ('Le Lotus bleu', 1936, 1, 1),
@@ -48,28 +59,34 @@ Insérez des données dans les tables :
     ('Les Aventures de Tintin : Objectif Lune', 1953, 1, 1),
     ('Astérix chez les Goths', 1963, 2, 2),
     ('Astérix et les Normands', 1966, 2, 2),
-    ('Astérix et les Vikings', 1965, 3, 3);
+    ('Astérix et les Vikigs', 1965, 3, 3);
 
 Exercice 1: Modifications de données
 
 Ajouter une nouvelle colonne "prix" de type DECIMAL à la table "livres" avec une valeur par défaut de 0 :
-
+    ALTER TABLE livres ADD prix DECIMAL(8,2) DEFAULT 0;
 
 Mettre à jour le prix du livre avec l'ID 1 pour le faire passer à 19.99 :
-
+    UPDATE livres SET prix = 19.99 WHERE id_livre = 1;
 
 Supprimer le livre avec l'ID 3 de la table "livres" :
+    DELETE FROM livres WHERE id_livre=3;
 
 
 Exercice 2: Requêtes de sélection
 
 Sélectionner tous les livres avec leur titre et leur prix :
+    SELECT titre, prix FROM livres;
 
-
+Modifier la requete pour afficher 'Nos super bouquins au lieu de titre,
+    SELECT titre AS 'Nos super bouquins', prix FROM livres;
+    SELECT titre 'Nos super bouquins', prix FROM livres;
+    
 Sélectionner tous les livres publiés après l'année 2000 :
-
+    SELECT * FROM livres WHERE annee_publication > 2000;
 
 Sélectionner les auteurs distincts présents dans la table "livres" :
+    SELECT DISTINCT id_auteur FROM livres;
 
 
 Exercice 3: Requêtes avec jointure
