@@ -1,7 +1,7 @@
 # [SQL](https://sql.sh/)
 
 <center>
-<img src="https://banner2.cleanpng.com/20180403/lhe/kisspng-microsoft-azure-sql-database-microsoft-sql-server-database-5ac3dfa11c1874.3743286715227862091151.jpg" alt="Javascript Logo" width="150">
+<img src="./img/sql-logo.png" width="150">
 </center>
 
 <br>
@@ -43,6 +43,5 @@ Les participants apprendront les bases de la conception de bases de données, la
     - Gestion des utilisateurs et des privilèges d'accès
     - Sécurité des bases de données: bonnes pratiques et prévention des attaques
     - Sauvegarde et restauration des bases de données
-    - Optimisation des performances: utilisation d'EXPLAIN pour analyser les requêtes, utilisation des index appropriés, etc.
 
 _Ce plan de cours fournit une introduction à MySQL pour les débutants en développement web. Il couvre les bases de la conception de bases de données, la manipulation des données et l'interrogation des données à l'aide du langage SQL. Les participants auront l'occasion de mettre en pratique leurs connaissances grâce à des exercices pratiques et des exemples concrets. À la fin de la formation, ils devraient être en mesure de créer et de gérer des bases de données MySQL._
