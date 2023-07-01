@@ -28,7 +28,6 @@ Voici quelques-uns des types de données couramment utilisés dans MySQL :
    - `BOOL` : Booléen, prenant les valeurs TRUE ou FALSE (ou 1 ou 0).
    - `BOOLEAN` : Alias de BOOL.
 
-
 **Énumérations** :
    - `ENUM` : Type d'énumération, prenant une liste de valeurs prédéfinies.
 

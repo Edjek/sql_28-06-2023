@@ -1,25 +1,36 @@
 Voici quelques commandes de base pour interagir avec une table dans une base de données MySQL :
 
 **Affichages des tables** :
+
     SHOW TABLES;
 
+
 **Affichage de la structure d'une table** :
+
     DESCRIBE nom_table;
 
+
 **Affichage de la requete de création de la table** :
+
     SHOW CREATE TABLE nom_table;
 
-***Suppression d'une table ** :
+
+**Suppression d'une table** :
+
     DROP TABLE nom_table;
 
+
 **Création d'une table** :
+
     CREATE TABLE nom_table (
         nom VARCHAR(255),
         age INT,
         email VARCHAR(255)
     );
 
+
 **Ajouter des contraintes** :
+
     CREATE TABLE user (
         id int UNSIGNED PRIMARY KEY AUTO_INCREMENT ,
         nom VARCHAR(255) NOT NULL, 
@@ -30,32 +41,45 @@ Voici quelques commandes de base pour interagir avec une table dans une base de 
         CONSTRAINT fk_nom FOREIGN KEY (prenom) REFERENCES nom_table(id)
     );
 
+
 **Insertion de données dans une table** :
+
     INSERT INTO nom_table (colonne1, colonne2, ...)
     VALUES (valeur1, valeur2,...), (valeur1, valeur2,...);
 
+
 **Sélection de données d'une table** :
+
     SELECT *
     FROM nom_table;
 
+
 **Mise à jour de données dans une table** :
+
     UPDATE nom_table
     SET nom_colonne = nouvelle_valeur, nom_colonne2 = nouvelle_valeur2
     WHERE condition;
 
+
 **Suppression de données dans une table** :
+
     DELETE FROM nom_table
     WHERE conditions;
+    
 
 **Jointure entre deux tables** :
+
     SELECT * FROM nom_de_table JOIN autre_table ON champs_enfant = champs_parent;
+    
 
 **Alias explicite** :
-    SELECT un_nom.id AS 'modifier affichage' 
-    FROM nom_de_table AS un_nom 
-    JOIN autre_table AS autre_nom ON champs_enfant = champs_parent;
+
+    SELECT un_alias.id AS 'modifier affichage' 
+    FROM nom_de_table AS un_alias 
+    JOIN autre_table AS autre_alias ON champs_enfant = champs_parent;
+    
 
 **Alias implicite** :
-    SELECT un_nom.id 'modifier affichage' 
-    FROM nom_de_table un_nom 
-    JOIN autre_table, autre_nom ON champs_enfant = champs_parent;
+    SELECT un_alias.id 'modifier affichage' 
+    FROM nom_de_table un_alias 
+    JOIN autre_table, autre_alias ON champs_enfant = champs_parent;
