@@ -88,7 +88,6 @@ Sélectionner tous les livres publiés après l'année 2000 :
 Sélectionner les auteurs distincts présents dans la table "livres" :
     SELECT DISTINCT id_auteur FROM livres;
 
-
 Exercice 3: Requêtes avec jointure
 
 Sélectionner tous les livres avec leur titre, nom de l'auteur et nom de l'éditeur :
